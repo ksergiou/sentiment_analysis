@@ -7,7 +7,6 @@ news_tables = {}
 
 for ticker in tickers:
     url = finviz_url + ticker
-
     req = Request(url=url, headers={'user-agent': 'my-app'})
     response = urlopen(req)
 
@@ -33,5 +32,4 @@ for ticker, news_table in news_tables.items():
         parsed_data.append([ticker, date, time, title])
 
 df = pd.DataFrame(parsed_data, columns=['ticker', 'date', 'time', 'title'])
-
 df.to_csv('news_df.csv',index=False)
