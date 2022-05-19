@@ -24,10 +24,10 @@ for ticker, news_table in news_tables.items():
         date_data = row.td.text.split(' ')
 
         if len(date_data) == 1:
-            time = date_data[0]
+            time = date_data[0][0:7]
         else:
             date = date_data[0]
-            time = date_data[1]
+            time = date_data[1][0:7]
 
         parsed_data.append([ticker, date, time, title])
 
