@@ -1,3 +1,4 @@
 # sentiment_analysis
 
-Sentiment Analysis using FinBERT.
+Sentiment Analysis of recent financial news using FinBERT.
+

@@ -76,7 +76,8 @@ def finbert_sentiment(df):
     mean_df = mean_df.xs('compound', axis="columns")
     #mean_df.plot(kind='bar')
     mean_df_s=mean_df.iloc[:, -8:].copy()
-    mean_df_s.plot(kind='bar')
+    mean_df_s.plot(kind='bar', figsize=(14,14))
+    plt.savefig("sent_analysis.png")
     plt.show()
 
     print(mean_df_s.shape)
